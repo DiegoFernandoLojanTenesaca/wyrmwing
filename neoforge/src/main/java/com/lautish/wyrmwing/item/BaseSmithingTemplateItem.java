@@ -1,0 +1,30 @@
+package com.lautish.wyrmwing.item;
+
+import net.minecraft.util.Util;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.item.SmithingTemplateItem;
+
+import java.util.List;
+
+import static com.lautish.wyrmwing.WyrmwingMod.MODID;
+
+public class BaseSmithingTemplateItem extends SmithingTemplateItem {
+    public BaseSmithingTemplateItem(Component appliesTo, Component ingredients, Component baseSlotDescription, Component additionsSlotDescription, List<Identifier> iconList, List<Identifier> materialList, Properties properties) {
+        super(appliesTo, ingredients, baseSlotDescription, additionsSlotDescription, iconList, materialList, properties);
+    }
+
+    public static BaseSmithingTemplateItem createUpgradeTemplate(String key, Properties properties) {
+        Component[] c = createComponents(key);
+        return new BaseSmithingTemplateItem(c[0], c[1], c[2], c[3], SmithingTemplateItem.createNetheriteUpgradeIconList(), SmithingTemplateItem.createNetheriteUpgradeMaterialList(), properties);
+    }
+
+    private static Component[] createComponents(String key) {
+        return new Component[]{
+                Component.translatable(Util.makeDescriptionId("item", Identifier.fromNamespaceAndPath(MODID, String.format("smithing_template.%s_upgrade.applies_to", key)))).withStyle(SmithingTemplateItem.DESCRIPTION_FORMAT),
+                Component.translatable(Util.makeDescriptionId("item", Identifier.fromNamespaceAndPath(MODID, String.format("smithing_template.%s_upgrade.ingredients", key)))).withStyle(SmithingTemplateItem.DESCRIPTION_FORMAT),
+                Component.translatable(Util.makeDescriptionId("item", Identifier.fromNamespaceAndPath(MODID, String.format("smithing_template.%s_upgrade.base_slot_description", key)))),
+                Component.translatable(Util.makeDescriptionId("item", Identifier.fromNamespaceAndPath(MODID, String.format("smithing_template.%s_upgrade.additions_slot_description", key))))
+        };
+    }
+}

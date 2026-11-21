@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "wyrmwing:wyrmwing"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "wyrmwing:wyrmwing"
+      }
+    ]
+  }
+}

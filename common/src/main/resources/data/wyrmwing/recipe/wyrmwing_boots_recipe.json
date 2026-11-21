@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "base": "minecraft:netherite_boots",
+  "addition": "#wyrmwing:wyrm_scales",
+  "result": {
+    "id": "wyrmwing:wyrmwing_boots"
+  },
+  "template": "wyrmwing:wyrmwing_upgrade_smithing_template"
+}

@@ -1,0 +1,26 @@
+package com.lautish.wyrmwing.init;
+
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+
+import static com.lautish.wyrmwing.WyrmwingMod.MODID;
+
+public class ModTab {
+    public static final CreativeModeTab TAB_WYRMWING = CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0)
+            .icon(() -> new ItemStack(ModContent.WYRMWING_ARMOR.get(1)))
+            .displayItems((features, event) -> {
+                for (Item item : ModContent.ITEMS)
+                    event.accept(item);
+            })
+            .title(Component.translatable("itemGroup.wyrmwing.tab_wyrmwing"))
+            .build();
+
+    public static void init() {
+        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, Identifier.fromNamespaceAndPath(MODID, "tab_wyrmwing"), TAB_WYRMWING);
+    }
+}

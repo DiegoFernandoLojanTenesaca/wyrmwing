@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DSD",
+    "DED",
+    "DDD"
+  ],
+  "key": {
+    "D": "#c:gems/diamond",
+    "S": "#wyrmwing:wyrm_scales",
+    "E": "minecraft:end_stone"
+  },
+  "result": {
+    "id": "wyrmwing:wyrmwing_upgrade_smithing_template",
+    "count": 1
+  }
+}
