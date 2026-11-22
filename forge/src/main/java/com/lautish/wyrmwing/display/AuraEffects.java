@@ -41,7 +41,7 @@ public class AuraEffects {
         if (player == camera && minecraft.options.getCameraType().isFirstPerson() && !ModConfig.showOwnAuraFirstPerson)
             return;
         ClientLevel level = (ClientLevel) player.level();
-        float yaw = level.getGameTime() * ORBIT_STEP;
+        float yaw = (level.getGameTime() % 360) * ORBIT_STEP;
         add(minecraft, AuraParticle.orbit(level, player, LOW_RING, yaw, VIOLET, 0.7f, ORBIT_LIFETIME));
         add(minecraft, AuraParticle.orbit(level, player, LOW_RING, yaw + 180, DARK_VIOLET, 0.8f, ORBIT_LIFETIME));
         add(minecraft, AuraParticle.orbit(level, player, HIGH_RING, yaw + 90, LILAC, 0.6f, ORBIT_LIFETIME));

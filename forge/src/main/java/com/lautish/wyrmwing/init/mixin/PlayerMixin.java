@@ -74,7 +74,7 @@ public abstract class PlayerMixin extends LivingEntity implements WyrmwingFlyer 
             wyrmwingSafeFall = false;
         else if (wyrmwingSafeFall)
             resetFallDistance();
-        entityData.set(WYRMWING_FLYING, wyrmwingFlightGranted && abilities.flying);
+        entityData.set(WYRMWING_FLYING, WyrmwingSet.isFullSet(this) && abilities.flying);
     }
 
     @Inject(method = "causeFallDamage", at = @At("HEAD"), cancellable = true)
