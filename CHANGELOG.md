@@ -1,1 +1,2 @@
-- Initial release
+- Added glowing lines on the armor, they can be turned off in the config
+- Added Spanish for Argentina, Chile, Ecuador, Uruguay and Venezuela
