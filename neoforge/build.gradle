@@ -68,7 +68,8 @@ publishMods {
     displayName = "${mod_name} ${project.version}"
     type = STABLE
     modLoaders.addAll("neoforge")
-    changelog = rootProject.file("CHANGELOG.md").text
+    changelog = rootProject.publishNotes
+    dryRun = rootProject.publishDryRun
     def gameVersions = ["26.3"]
 
     curseforge {

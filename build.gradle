@@ -36,3 +36,10 @@ subprojects {
         enabled = false
     }
 }
+
+ext.publishNotes = providers.provider {
+    def notes = file("CHANGELOG.md").text
+    if (notes.isBlank()) throw new GradleException("CHANGELOG.md is empty")
+    notes
+}
+ext.publishDryRun = ["CURSEFORGE_TOKEN", "MODRINTH_TOKEN"].any { System.getenv(it) == null }
