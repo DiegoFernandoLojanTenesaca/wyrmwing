@@ -79,4 +79,11 @@ publishMods {
         serverRequired = true
         requires("fabric-api")
     }
+
+    modrinth {
+        accessToken = System.getenv("MODRINTH_TOKEN")
+        projectId = "Oekvcf0H"
+        minecraftVersions.addAll(gameVersions)
+        requires("fabric-api")
+    }
 }
