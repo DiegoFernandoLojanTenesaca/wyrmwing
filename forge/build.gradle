@@ -3,6 +3,7 @@ plugins {
     id 'idea'
     id 'net.minecraftforge.gradle' version '[7.0.17,8)'
     id 'net.minecraftforge.jarjar' version '0.2.3'
+    id 'me.modmuss50.mod-publish-plugin' version '0.6.3'
 }
 
 version = "${version}-forge"
@@ -86,3 +87,26 @@ processResources {
 
 tasks.jarJar.setArchiveClassifier('')
 jar.finalizedBy('jarJar')
+
+publishMods {
+    file = tasks.jarJar.archiveFile
+    displayName = "${mod_name} ${project.version}"
+    type = STABLE
+    modLoaders.addAll("forge")
+    changelog = rootProject.file("CHANGELOG.md").text
+    def gameVersions = ["26.3"]
+
+    curseforge {
+        accessToken = System.getenv("CURSEFORGE_TOKEN")
+        projectId = "1822617"
+        minecraftVersions.addAll(gameVersions)
+        clientRequired = true
+        serverRequired = true
+    }
+}
+
+["publishCurseforge", "publishMods"].each { task ->
+    tasks.named(task) {
+        mustRunAfter(":fabric:$task")
+    }
+}

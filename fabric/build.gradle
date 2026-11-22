@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'idea'
     id 'net.fabricmc.fabric-loom' version '1.18-SNAPSHOT'
+    id 'me.modmuss50.mod-publish-plugin' version '0.6.3'
 }
 
 version = "${version}-fabric"
@@ -60,4 +61,22 @@ processResources {
     }
     from project(":common").sourceSets.main.resources
     exclude '**/data/forge/**', '**/data/neoforge/**'
+}
+
+publishMods {
+    file = tasks.jar.archiveFile
+    displayName = "${mod_name} ${project.version}"
+    type = BETA
+    modLoaders.addAll("fabric", "quilt")
+    changelog = rootProject.file("CHANGELOG.md").text
+    def gameVersions = ["26.3"]
+
+    curseforge {
+        accessToken = System.getenv("CURSEFORGE_TOKEN")
+        projectId = "1822617"
+        minecraftVersions.addAll(gameVersions)
+        clientRequired = true
+        serverRequired = true
+        requires("fabric-api")
+    }
 }
