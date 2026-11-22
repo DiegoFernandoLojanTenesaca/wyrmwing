@@ -1,4 +1,5 @@
 <h2><strong>Wyrmwing mod</strong></h2>
+<p><a href="https://www.curseforge.com/minecraft/mc-mods/wyrmwing"><img src="https://cf.way2muchnoise.eu/full_1822617_downloads.svg?badge_style=flat" alt="CurseForge downloads" /></a></p>
 
 An end-game armor forged from dragon scales: fly with the full set, wrapped in a dragon aura
 
