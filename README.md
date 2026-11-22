@@ -23,7 +23,7 @@ An end-game armor forged from dragon scales: fly with the full set, wrapped in a
 
 <img src="https://raw.githubusercontent.com/DiegoFernandoLojanTenesaca/wyrmwing/media/wings.png" width="500">
 <img src="https://raw.githubusercontent.com/DiegoFernandoLojanTenesaca/wyrmwing/media/flying.png" width="500">
-<img src="https://raw.githubusercontent.com/DiegoFernandoLojanTenesaca/wyrmwing/media/dragon.png" width="500">
+<img src="https://raw.githubusercontent.com/DiegoFernandoLojanTenesaca/wyrmwing/media/ender-dragon.png" width="500">
 <img src="https://raw.githubusercontent.com/DiegoFernandoLojanTenesaca/wyrmwing/media/recipes.png" width="500">
 
 </details>
