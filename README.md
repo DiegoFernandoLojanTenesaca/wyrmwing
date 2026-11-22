@@ -11,6 +11,7 @@ An end-game armor forged from dragon scales: fly with the full set, wrapped in a
 - Every piece: +2.5% speed and +0.5 attack damage
 - Helmet: breathe underwater. Boots: no fall damage
 - Full set: creative flight and a dragon aura, with particle wings while you fly<br><img src="https://cdn.modrinth.com/data/Oekvcf0H/images/a62ce57471181f66129b74069f8d9f34b7142c2e.png" width="500"><br><img src="https://cdn.modrinth.com/data/Oekvcf0H/images/357891003fe46eff634c44c2a67cc977b9b82936.png" width="500">
+- The lilac lines of the armor glow in the dark
 - Every feature can be toggled in the mod config
 
 <strong>Fabric/Quilt dependencies:</strong>

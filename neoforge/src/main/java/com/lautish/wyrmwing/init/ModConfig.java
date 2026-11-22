@@ -9,6 +9,8 @@ public class ModConfig extends TXFConfig {
     public static boolean showAura = true;
     @Entry
     public static boolean showOwnAuraFirstPerson = false;
+    @Entry
+    public static boolean armorGlow = true;
     @Entry(min = 0, max = 64)
     public static int dragonScaleDrops = 8;
 }

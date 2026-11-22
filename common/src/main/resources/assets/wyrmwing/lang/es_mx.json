@@ -22,6 +22,8 @@
   "wyrmwing.config.showAura.tooltip": "Partículas alrededor de quien trae el set completo, y alas mientras vuela",
   "wyrmwing.config.showOwnAuraFirstPerson": "Ver tu aura en primera persona",
   "wyrmwing.config.showOwnAuraFirstPerson.tooltip": "Desactivado por defecto para que las partículas no te tapen la vista",
+  "wyrmwing.config.armorGlow": "Armadura brillante",
+  "wyrmwing.config.armorGlow.tooltip": "Las líneas lilas de la armadura brillan en la oscuridad",
   "wyrmwing.config.dragonScaleDrops": "Escamas del Enderdragón",
   "wyrmwing.config.dragonScaleDrops.tooltip": "Escamas de wyrm que recibe cada jugador cercano cuando muere el dragón"
 }

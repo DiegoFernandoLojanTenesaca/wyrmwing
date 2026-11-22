@@ -22,6 +22,8 @@
   "wyrmwing.config.showAura.tooltip": "Particles around players wearing the full set, and wings while they fly",
   "wyrmwing.config.showOwnAuraFirstPerson": "Show your own aura in first person",
   "wyrmwing.config.showOwnAuraFirstPerson.tooltip": "Off by default so the particles never block your view",
+  "wyrmwing.config.armorGlow": "Glowing armor",
+  "wyrmwing.config.armorGlow.tooltip": "The lilac lines of the armor glow in the dark",
   "wyrmwing.config.dragonScaleDrops": "Scales from the Ender Dragon",
   "wyrmwing.config.dragonScaleDrops.tooltip": "Wyrm Scales each nearby player gets when the dragon dies"
 }
